@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <script>
+        function displayFormInfo(event) {
+            // Prevent the form from submitting
+            event.preventDefault();
+
+            // Retrieve values from the form fields
+            let firstName = document.getElementById('firstName').value;
+            let lastName = document.getElementById('lastName').value;
+            let phoneNumber = document.getElementById('phoneNumber').value;
+            let emailID = document.getElementById('emailID').value;
+
+            // Create the alert message
+            let alertMessage = `First Name: ${firstName} Last Name: ${lastName} Phone Number: ${phoneNumber} Email ID: ${emailID}`;
+
+            // Display the alert with form information
+            alert(alertMessage);
+        }
+    </script>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <h1>Form Login</h1>
+    <form onsubmit="displayFormInfo(event)">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
 
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+
+        <label for="emailID">Email ID:</label>
+        <input type="text" id="emailID" name="emailID"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
-
 </html>
+
